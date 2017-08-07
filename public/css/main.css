@@ -1,0 +1,34 @@
+body {
+	background-color:  rgba(34, 239, 246, 1.0); 
+	/*background-image: url("../images/Book3.jpg");*/
+	background-blend-mode: screen;
+	background-size: 100%;
+	color: #d68fd6
+
+}
+
+.navbar-default {
+	background-color: #656665;
+	color: #d68fd6
+}
+
+.container {
+	color: #d68fd6
+}
+
+#bootstrap-overrides .navbar-brand  {
+	color: #d68fd6
+}
+
+#bootstrap-overrides a {
+	color: #d68fd6
+}
+
+#bootstrap-overrides .btn {
+	background-color: #d68fd6;
+	color: #22eff6;
+}
+
+.form-control {
+	background-color: #DEFFF2;
+}
