@@ -1,36 +1,37 @@
 body {
-	background-color:  rgba(34, 239, 246, 1.0); 
-	background-image: url("../images/Book3.jpg");
+	background-color: #0D0A0B; 
+	/*background-image: url("../images/Book3.jpg");*/
 	background-blend-mode: screen;
 	background-size: 100%;
-	color: #d68fd6
+	color: #F3EFF5
 
 }
 
 .navbar-default {
-	background-color: #656665;
-	color: #d68fd6
+	background-color: #0D0A0B;
+	color: #F3EFF5
 }
 
 .container {
-	color: #d68fd6
+	color: #F3EFF5
 }
 
 #bootstrap-overrides .navbar-brand  {
-	color: #d68fd6
+	color: #F3EFF5
 }
 
 #bootstrap-overrides a {
-	color: #d68fd6
+	color: #F3EFF5
 }
 
 #bootstrap-overrides .btn {
-	background-color: #d68fd6;
-	color: #22eff6;
+	background-color: #0D0A0B;
+	color: #F3EFF5;
 }
 
 .form-control {
-	background-color: #DEFFF2;
+	background-color: #0D0A0B;
+	color: #F3EFF5;
 }
 
  #homepage  {
