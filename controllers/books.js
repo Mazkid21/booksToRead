@@ -1,21 +1,34 @@
+'use strict'
+
 const request 		= require('request');
 const bodyParser 	= require('body-parser');
-const env 			= require('../env.js');
-const db 			= require('../models');
+const apiKey 		= require('../env.js');
+
 const passport		= require('passport');
 
+const bookSearch = ["dan brown"];
+
+const apiUrl = 'https://www.googleapis.com/books/v1/volumes?q=' + bookSearch + "&key=" + apiKey;
+console.log(apiUrl);
 
 
-function getBooksFromApi(req, res, next) {
+function get(bookSearch) {
 
-	var url = 'https://www.googleapis.com/books/v1/volumes?q=' +
-		req.body.search;
+	var queryArray = bookSearch.split(" ");
+	var queryString = "";
+		queryArray.forEach(function(element, index) {
+			queryString += element;
+			if (index < queryArray.length -1)
+				queryString += '+';
+		});
 
+		apiUrl += queryString;
 
+	request(apiUrl, function (error, response, body) {
 
-	request(url, function(error, response, body) {
-		if (error) return error;
-
-		res.json(body.results);
+		var bodyObject = JSON.parse(body);
+		console.log("Body object: " + bodyObject);
 	});
 }
+
+module.exports = get;
