@@ -7,8 +7,10 @@ var morgan       = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser   = require('body-parser');
 var session      = require('express-session');
+var books     	= require('./controllers/books.js');
+var db        =require('./models');
 
-mongoose.connect('mongodb://localhost/booksToReadApp'); 
+
 
 app.use(morgan('dev')); 
 app.use(cookieParser());
@@ -34,5 +36,13 @@ app.use(function (req, res, next) {
 
 var routes = require('./config/routes');
 app.use(routes);
+
+// From google movie hw, should help with getting data from api to backend
+// var twoBooks = ["dan brown", "shantaram"];
+// twoBooks.forEach(function(film){
+// 	books(film);
+// });
+
+
 
 app.listen(process.env.PORT || 3000);

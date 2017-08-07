@@ -37,3 +37,12 @@ body {
  #homepage  {
 	text-align: center;
 }
+
+button.landing  {
+	background-color: black;
+}
+
+input.btn.btn-info.active {
+	border-color: white;
+}
+

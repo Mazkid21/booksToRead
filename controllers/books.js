@@ -3,18 +3,21 @@
 const request 		= require('request');
 const bodyParser 	= require('body-parser');
 const apiKey 		= require('../env.js');
-
 const passport		= require('passport');
 
-const bookSearch = ["dan brown"];
+
+const bookSearch = []; //Will add this to the ApiUrl down bellow, need to make this the fourm field. 
 
 const apiUrl = 'https://www.googleapis.com/books/v1/volumes?q=' + bookSearch + "&key=" + apiKey;
+
 console.log(apiUrl);
 
 
-function get(bookSearch) {
+function getBooks(req, res, next) {
 
-	var queryArray = bookSearch.split(" ");
+	
+
+	var queryArray = req.name.split(" ");
 	var queryString = "";
 		queryArray.forEach(function(element, index) {
 			queryString += element;
@@ -22,7 +25,7 @@ function get(bookSearch) {
 				queryString += '+';
 		});
 
-		apiUrl += queryString;
+		//apiUrl += queryString;
 
 	request(apiUrl, function (error, response, body) {
 
@@ -31,4 +34,4 @@ function get(bookSearch) {
 	});
 }
 
-module.exports = get;
+module.exports.getBooks = getBooks;
