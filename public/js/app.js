@@ -46,6 +46,14 @@ $("#new-book").submit(function(event) {
         var bookDescription1 = data.items[0].volumeInfo.description;
         var bookDescription2 = data.items[1].volumeInfo.description;
         var bookDescription3 = data.items[2].volumeInfo.description;
+
+        var bookImage1 = data.items[0].volumeInfo.imageLinks.smallThumbnail;
+        var bookImage2 = data.items[1].volumeInfo.imageLinks.smallThumbnail;
+        var bookImage3 = data.items[2].volumeInfo.imageLinks.smallThumbnail;
+
+
+
+        
         
         
        
@@ -67,8 +75,10 @@ $("#new-book").submit(function(event) {
                           "<h4>" + "Author 1:" + "</h4>" +
                             "<p>" + bookAuthor1  + "</p>" +
                           "<h4>" + "Description 1" + "</h4>" +
-                                     bookDescription1 +
-                          "<br>" +
+                                     bookDescription1 + 
+                          "<br>" + "<br>" +
+                          "<img src=" + bookImage1 +
+                          "<br>" + "<br>" + "<br>" + 
                           "</div>" +
                           "<br>" + "<br>" +
 
@@ -79,9 +89,11 @@ $("#new-book").submit(function(event) {
                               "<p>" + bookAuthor2  + "</p>" +
                             "<h4>" + "Description 2" + "</h4>" +
                                      bookDescription2 +
-                            "<br>" +
-                            "</div>" +
                             "<br>" + "<br>" +
+                          "<img src=" + bookImage2 +
+                          "<br>" + "<br>" + "<br>" + 
+                          "</div>" +
+                          "<br>" + "<br>" +
                            
                             "<div class='book3'>" +
                             "<h4>" + "Title 3:" + "</h4>" +
@@ -90,7 +102,11 @@ $("#new-book").submit(function(event) {
                               "<p>" + bookAuthor3 + "</p>" +
                             "<h4>" + "Description 3" + "</h4>" +
                                      bookDescription3 +
-                            "<br>" +
+                            "<br>" + "<br>" +
+                          "<img src=" + bookImage3 +
+                          "<br>" + "<br>" + "<br>" + 
+                          "</div>" +
+                          "<br>" + "<br>" +
                             "</div>" +
                           "</div>" +
                           "<div class='save'></div>";
