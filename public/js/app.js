@@ -3,14 +3,21 @@
 $('document').ready(function(){
   execute();
 });
+// var bookSearch;
+
 
 function execute() {
 
 $("body").append("<div id='books-list'></div>");
 $("#new-book").submit(function(event) {
   event.preventDefault();
-  var bookSearch =  $('#book-name').val();
- 
+var  bookSearch =  $('#book-name').val();
+    for(var i=0; i < bookSearch.length; i++) {
+      bookSearch = bookSearch.replace(" ", "+");
+    }
+
+console.log(bookSearch);
+
   // SHOULD WORK GETTING + IN BEWTWEEN search string
   // function addBookSearch() {
   
