@@ -17,16 +17,34 @@ body {
 }
 
 #bootstrap-overrides .navbar-brand  {
-	color: #F3EFF5
+	color: black;
 }
 
 #bootstrap-overrides a {
-	color: #F3EFF5
+	color: white;
 }
 
 #bootstrap-overrides .btn {
 	background-color: #0D0A0B;
-	color: #F3EFF5;
+	border-radius: 5px;
+    border: 1px solid white;
+    box-shadow: inset -1px -1px 3px 0px white;
+    cursor: pointer;
+    color: white;
+    outline: none;
+
+}
+
+#bootstrap-overrides .btn:hover {
+	background-color: white;
+    color: black;
+}
+
+#bootstrap-overrides .btn:active {
+	background-color: black;
+    box-shadow: 0 5px black;
+    color: white;
+	transform: translateY(2px);
 }
 
 .form-control {
@@ -44,5 +62,49 @@ button.landing  {
 
 input.btn.btn-info.active {
 	border-color: white;
+}
+
+button.navbar-toggle.collapsed  {
+	background-color: black;
+}
+
+div.navbar-header {
+	background-color: white;
+}
+
+nav.navbar.navbar-inverse.bg-inverse {
+	background-color: white;
+}
+
+#bootstrap-overrides a.logOut {
+	color: black;
+}
+
+
+button.landing {
+	
+    
+    border-radius: 5px;
+    border: 1px solid white;
+    box-shadow: inset -1px -1px 3px 0px white;
+    cursor: pointer;
+    color: white;
+    outline: none;
+    
+}
+
+/* Start game button hover styling*/
+button.landing:hover {
+    background-color: white;
+    color: black;
+}
+
+/*Start game click styling*/
+button.landing:active {
+	background-color: black;
+    box-shadow: 0 5px black;
+    color: white;
+	transform: translateY(2px);
+
 }
 
