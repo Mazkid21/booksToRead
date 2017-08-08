@@ -20,12 +20,12 @@ $("#new-book").submit(function(event) {
   console.log(newBookToAdd);
   
   $.ajax ( {
-    url: "/books", 
+    url: "/book", 
     dataType: 'json', 
     method: 'POST',
     data: JSON.stringify(newBookToAdd),
     success: function(element) {
-      
+      console.log(element);
       
         $("ul").append("<li>" + element.name + "</li>");
         alert ("your form has been submitted!!!!!");

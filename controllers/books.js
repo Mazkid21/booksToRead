@@ -8,14 +8,15 @@ const passport		= require('passport');
 
 const bookSearch = []; //Will add this to the ApiUrl down bellow, need to make this the fourm field. 
 
-const apiUrl = 'https://www.googleapis.com/books/v1/volumes?q=' + bookSearch + "&key=" + apiKey;
 
-console.log(apiUrl);
+
 
 
 function getBooks(req, res, next) {
 
-	
+	const apiUrl = 'https://www.googleapis.com/books/v1/volumes?q=' + req.params + "&key=" + apiKey;
+
+	console.log(apiUrl);
 
 	var queryArray = req.name.split(" ");
 	var queryString = "";
