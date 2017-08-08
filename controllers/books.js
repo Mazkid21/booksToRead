@@ -2,7 +2,7 @@
 
 const request 		= require('request');
 const bodyParser 	= require('body-parser');
-const apiKey 		= require('../env.js');
+// const apiKey 		= require('../env.js');
 const passport		= require('passport');
 
 
