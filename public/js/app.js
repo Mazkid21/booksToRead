@@ -68,8 +68,12 @@ $("#new-book").submit(function(event) {
 
 
         var bookData = 
+
                           "<div>" + 
                           "<div class='book1'>" +
+                          
+                          "<img src=" + bookImage1 +
+                          "<br>" + "<br>" + "<br>" +
                           "<h4>" + "Title 1:" + "</h4>" +
                             "<p>" + bookTitle1  + "</p>" +
                           "<h4>" + "Author 1:" + "</h4>" +
@@ -77,12 +81,16 @@ $("#new-book").submit(function(event) {
                           "<h4>" + "Description 1" + "</h4>" +
                                      bookDescription1 + 
                           "<br>" + "<br>" +
-                          "<img src=" + bookImage1 +
-                          "<br>" + "<br>" + "<br>" + 
+                           
                           "</div>" +
                           "<br>" + "<br>" +
 
+                            
+
+                            
                             "<div class='book2'>" +
+                            "<img src=" + bookImage2 +
+                          "<br>" + "<br>" + "<br>" + 
                             "<h4>" + "Title 2:" + "</h4>" +
                               "<p>" + bookTitle2  + "</p>" +
                             "<h4>" + "Author 2:" + "</h4>" +
@@ -90,12 +98,13 @@ $("#new-book").submit(function(event) {
                             "<h4>" + "Description 2" + "</h4>" +
                                      bookDescription2 +
                             "<br>" + "<br>" +
-                          "<img src=" + bookImage2 +
-                          "<br>" + "<br>" + "<br>" + 
+                          
                           "</div>" +
                           "<br>" + "<br>" +
                            
                             "<div class='book3'>" +
+                            "<img src=" + bookImage3 +
+                          "<br>" + "<br>" + "<br>" + 
                             "<h4>" + "Title 3:" + "</h4>" +
                               "<p>" + bookTitle3  + "</p>" +
                             "<h4>" + "Author 3:" + "</h4>" +
@@ -103,8 +112,7 @@ $("#new-book").submit(function(event) {
                             "<h4>" + "Description 3" + "</h4>" +
                                      bookDescription3 +
                             "<br>" + "<br>" +
-                          "<img src=" + bookImage3 +
-                          "<br>" + "<br>" + "<br>" + 
+                          
                           "</div>" +
                           "<br>" + "<br>" +
                             "</div>" +
