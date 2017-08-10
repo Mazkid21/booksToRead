@@ -105,7 +105,14 @@ nav.navbar.navbar-inverse.bg-inverse {
 #bootstrap-overrides .navButtons {
 	color: white;
 	float: right;
+	
 }
+
+#bootstrap-overrides .navButtons:hover {
+	color: #ffec18;
+}
+
+
 
 #login {
 	margin-right: 10px
