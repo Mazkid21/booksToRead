@@ -8,7 +8,7 @@ $('document').ready(function(){
 
 function execute() {
 
-$("body").append("<div id='books-list'></div>");
+$("body").append("<div id='bookContainer'><div id='books-list'></div></div");
 $("#new-book").submit(function(event) {
   event.preventDefault();
 var  bookSearch =  $('#book-name').val();
@@ -74,9 +74,9 @@ console.log(bookSearch);
 
 
 
-        var bookData = 
+        const bookData = 
 
-                          "<div>" + 
+                          "<div id='bookData'>" + 
                           "<div class='book1'>" +
                           
                           "<img src=" + bookImage1 +
@@ -128,7 +128,7 @@ console.log(bookSearch);
                           "<br>" + "<br>" +
                             "</div>" +
                           "</div>" +
-                          "<div class='save'></div>";
+                          "<div class='reSearch'></div>";
         $('#books-list').append(bookData);
 
           // for(i=0; i < data.dataset_data.column_names.length; i++){
@@ -155,10 +155,33 @@ console.log(bookSearch);
           button3.innerText="SAVE";
           $('.book3').append(button3);
 
+          var reSearch = document.createElement('button');
+          reSearch.setAttribute('class', 'btn btn-primary');
+          reSearch.setAttribute('id', 'searchAgain');
+          reSearch.innerText="SEARCH AGAIN";
+          $('.reSearch').append(reSearch);
+
+        $('#searchAgain').click(function(event) {
+          console.log("#books-list");
+          $('#books-list').remove("#books-list");
+          
+    
+  });
+
+        $("#new-book").submit(function(event) {
+          console.log(bookData);
+          $('#bookContainer').append(bookData);
+
+        });
+
       }
 
   });
+
+   
  });
+
+
 
 
 
