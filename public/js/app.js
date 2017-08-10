@@ -90,7 +90,9 @@ console.log(bookSearch);
                           "<br>" + "<br>" +
                            
                           "</div>" +
-                          "<br>" + "<br>" +
+                          "<br>" + 
+                          "<hr>" +
+                          "<br>" +
 
                             
 
@@ -107,7 +109,9 @@ console.log(bookSearch);
                             "<br>" + "<br>" +
                           
                           "</div>" +
-                          "<br>" + "<br>" +
+                          "<br>" + 
+                          "<hr>" +
+                          "<br>" +
                            
                             "<div class='book3'>" +
                             "<img src=" + bookImage3 +

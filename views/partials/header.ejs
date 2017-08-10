@@ -5,8 +5,10 @@
     <title>Books To Read</title>
     <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="./css/main.css">
+   <link href="https://fonts.googleapis.com/css?family=Roboto+Slab|Zilla+Slab+Highlight" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
   </head>
   <body id="bootstrap-overrides">
     <nav class="navbar navbar-inverse bg-inverse">
@@ -26,7 +28,10 @@
         <div class="collapse navbar-collapse" id="user-menu">
         <ul class="nav navbar-nav">
             <% if (currentUser) {%>
-          <li ><a href="/logout" class="logOut">Logout <%= currentUser.local.email %></a></li>
+          <li ><a href="/logout" class="navButtons">Logout <%= currentUser.local.email %></a></li>
+              <% } else { %>
+          <li><a href="/login" class="navButtons">Login</a></li>
+          <li><a href="/signup" class="navButtons">Signup</a></li> 
               
               
           

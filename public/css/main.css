@@ -1,23 +1,24 @@
 body {
-	background-color: #0D0A0B; 
+	background-color: #FFEC18; 
 	/*background-image: url("../images/Book3.jpg");*/
 	background-blend-mode: screen;
 	background-size: 100%;
-	color: #F3EFF5
+	color: black;
+	font-family: 'Zilla Slab Highlight', cursive;
 
 }
 
 .navbar-default {
-	background-color: #0D0A0B;
+	background-color: #FFEC18;
 	color: #F3EFF5
 }
 
 .container {
-	color: #F3EFF5
+	color: #212221
 }
 
 #bootstrap-overrides .navbar-brand  {
-	color: black;
+	color: white;
 }
 
 #bootstrap-overrides a {
@@ -25,17 +26,45 @@ body {
 }
 
 #bootstrap-overrides .btn {
-	background-color: #0D0A0B;
-	border-radius: 5px;
-    border: 1px solid white;
-    box-shadow: inset -1px -1px 3px 0px white;
-    cursor: pointer;
-    color: white;
-    outline: none;
+	border: 0px;
+    padding: 0px;
+	font-size: 2em;
+	background-color: #ffec18;
+	color: black; 
 
 }
 
-#bootstrap-overrides .btn:hover {
+label {
+	color: black;
+}
+
+h2{
+	color: black;
+}
+
+p{
+	color: black;
+}
+
+div.book1 {
+    border-bottom: 2px solid black;
+    border-top: 2px solid black;
+	padding: 5px;
+	line-height: 20px;
+}
+
+div.book2 {
+	border-bottom: 2px solid black;
+    border-top: 2px solid black;
+	padding: 5px;
+}
+
+div.book3 {
+	border-bottom: 2px solid black;
+    border-top: 2px solid black;
+	padding: 5px;
+}
+/*#bootstrap-overrides .btn:hover {
 	background-color: white;
     color: black;
 }
@@ -46,60 +75,93 @@ body {
     color: white;
 	transform: translateY(2px);
 }
-
+*/
 .form-control {
-	background-color: #0D0A0B;
-	color: #F3EFF5;
+	background-color: #FFEC18;
+	color: black;
+	
 }
 
  #homepage  {
 	text-align: center;
 }
 
-button.landing  {
-	background-color: black;
-}
 
 input.btn.btn-info.active {
 	border-color: white;
 }
 
 button.navbar-toggle.collapsed  {
-	background-color: black;
+	background-color: #212221;
+	border-color: white;
 }
 
 div.navbar-header {
-	background-color: white;
+	background-color: #212221;
 }
 
 nav.navbar.navbar-inverse.bg-inverse {
-	background-color: white;
+	background-color: #212221;
 }
 
-#bootstrap-overrides a.logOut {
-	color: black;
+#bootstrap-overrides .navButtons {
+	color: white;
+	float: right;
+}
+
+#login {
+	margin-right: 10px
+}
+
+#signup {
+	margin-left: 10px;
+}
+
+hr {
+	border-top: 1px solid #fdfdfd;
+	text-align: center;
+	margin: 30px ;
+}
+hr:after {
+	content: '§';
+	display: inline-block;
+	position: relative;
+	top: -14px;
+	padding: 0 10px;
+	background: #f0f0f0;
+	color: #000000;
+	font-size: 18px;
+	-webkit-transform: rotate(60deg);
+	-moz-transform: rotate(60deg);
+	transform: rotate(60deg);
+}
+
+.alert-danger {
+	    color: black;
+    background-color: #ffffff;
+    border-color: #ffffff;
+    font-family: 'Zilla Slab Highlight', cursive;
+
+}
+
+.homePageButtons {
+	padding-left: 15px;
 }
 
 
-button.landing {
-	
+/*button.landing {
+	border: 0px;
+    padding: 0px;
     
-    border-radius: 5px;
-    border: 1px solid white;
-    box-shadow: inset -1px -1px 3px 0px white;
-    cursor: pointer;
-    color: white;
-    outline: none;
-    
 }
 
-/* Start game button hover styling*/
+
 button.landing:hover {
     background-color: white;
     color: black;
 }
 
-/*Start game click styling*/
+
 button.landing:active {
 	background-color: black;
     box-shadow: 0 5px black;
@@ -108,5 +170,6 @@ button.landing:active {
 
 }
 
+*/
 
 
