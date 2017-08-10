@@ -64,21 +64,19 @@ div.book3 {
     border-top: 2px solid black;
 	padding: 5px;
 }
-/*#bootstrap-overrides .btn:hover {
-	background-color: white;
-    color: black;
+#bootstrap-overrides .btn:hover {
+	box-shadow: inset 1px 1px 1px 1px white;
 }
 
 #bootstrap-overrides .btn:active {
-	background-color: black;
-    box-shadow: 0 5px black;
-    color: white;
-	transform: translateY(2px);
+	background-color: white;
+   
 }
-*/
+
 .form-control {
 	background-color: #FFEC18;
-	color: black;
+    color: black;
+    box-shadow: inset 1px 1px 1px 1px white;
 	
 }
 
@@ -146,6 +144,12 @@ hr:after {
 
 .homePageButtons {
 	padding-left: 15px;
+}
+
+  .form-control:focus {
+        background-color: white;
+        border-color: white;
+        box-shadow: -1px -1px 1px #fff8f8 inset, 2px 7px 20px #040404;
 }
 
 
