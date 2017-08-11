@@ -5,9 +5,10 @@ var Book     = require('./book');
 var User = mongoose.Schema({
   local : {
     email        : String,
-    password     : String,
-    books        : [Book.schema]
-  }
+    password     : String
+    
+  },
+  	books        : [Book.schema]
 });
 
 User.methods.hash = function(password) {

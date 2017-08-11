@@ -5,7 +5,8 @@ var BookSchema = new Schema({
 		volumeInfo: {
 			id: String,
 			title: String,
-			authors: [String]
+			authors: [String],
+			description: String
 		}
 });
 

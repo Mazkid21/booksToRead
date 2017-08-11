@@ -9,11 +9,12 @@ $('document').ready(function(){
 function execute() {
 
 $("body").append("<div id='bookContainer'><div id='books-list'></div></div");
-$("#new-book").submit(function(event) {
+$("#searchBook").click(function(event) {
   event.preventDefault();
 var  bookSearch =  $('#book-name').val();
     for(var i=0; i < bookSearch.length; i++) {
       bookSearch = bookSearch.replace(" ", "+");
+      this.setAttribute("disabled", "disabled");
     }
 
 console.log(bookSearch);
@@ -74,7 +75,7 @@ console.log(bookSearch);
 
 
 
-        const bookData = 
+        let bookData = 
 
                           "<div id='bookData'>" + 
                           "<div class='book1'>" +
@@ -129,6 +130,8 @@ console.log(bookSearch);
                             "</div>" +
                           "</div>" +
                           "<div class='reSearch'></div>";
+
+
         $('#books-list').append(bookData);
 
           // for(i=0; i < data.dataset_data.column_names.length; i++){
@@ -142,6 +145,7 @@ console.log(bookSearch);
           // }
           var button1 = document.createElement('button');
           button1.setAttribute('class', 'btn btn-primary add-book');
+          button1.setAttribute('id', 'save1');
           button1.innerText="SAVE";
           $('.book1').append(button1);
 
@@ -161,16 +165,32 @@ console.log(bookSearch);
           reSearch.innerText="SEARCH AGAIN";
           $('.reSearch').append(reSearch);
 
+          console.log($('#save1'));
+
+        $('#save1').on('click', function(event){
+              console.log("save1 working");
+              var id = $('#userId').text();
+              console.log(id);
+  });
+
         $('#searchAgain').click(function(event) {
           console.log("#books-list");
           $('#books-list').remove("#books-list");
+           location.reload();
           
     
   });
 
-        $("#new-book").submit(function(event) {
-          console.log(bookData);
+        $("#searchBook").click(function(event) {
+          
+
+       bookData = bookData;
+
+       console.log(bookData);
+
+
           $('#bookContainer').append(bookData);
+
 
         });
 
@@ -178,8 +198,12 @@ console.log(bookSearch);
 
   });
 
+
+
+
    
  });
+
 
 
 
