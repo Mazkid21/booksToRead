@@ -60,8 +60,8 @@ function saveBook(request, response, next) {
 	var id = request.params.id;
 	db.User.findById(id)
 	.exec(function(err, foundUser) {
-		console.log(foundUser.books);
-		// response.JSON(foundUser.books);
+		console.log(foundUser);
+		 //response.JSON(foundUser);
 	});
 
 }
