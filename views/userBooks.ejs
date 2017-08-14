@@ -5,10 +5,10 @@
 <h2> hello userBooks.ejs!!!  </h2>
 
 <ul class="user-books">
-	<%var bookTitle1 =  JSON.stringify(currentUser.books[0].title)%>
-	<%var bookAuthor1 =  JSON.stringify(currentUser.books[0].authors)%>
+	<%var bookTitle1 =  JSON.parse(currentUser.books[0].title)%>
+	<%var bookAuthor1 =  JSON.parse(currentUser.books[0].authors)%>
 	<%var bookDescription1 =  JSON.stringify(currentUser.books[0].description)%>
-	<%var bookThumbnail1 =  JSON.stringify(currentUser.books[0].smallThumbnail)%>
+	
 
 	<h2> Title  </h2>
 	<li><%= bookTitle1 %></li>
@@ -16,7 +16,7 @@
 	<li><%= bookAuthor1 %> </li>
 	<h2> Description </h2>
 	<li><%= bookDescription1 %> </li>
-	<a><img href="bookThumbnail1"></a>
+	
 </ul>
 
 
