@@ -159,6 +159,14 @@ hr:after {
         box-shadow: -1px -1px 1px #fff8f8 inset, 2px 7px 20px #040404;
 }
 
+#userId {
+	display: none;
+}
+
+#bootstrap-overrides#searchAgain.btn {
+	color: #C03221; 
+}
+
 
 /*button.landing {
 	border: 0px;

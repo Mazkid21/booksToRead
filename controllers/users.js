@@ -1,4 +1,6 @@
-var passport = require("passport")
+var passport = require("passport");
+var request  = require('request');
+var db       = require('../models');
 
 // GET /signup
 function getSignup(request, response, next) {
@@ -46,14 +48,20 @@ function secret(request, response){
 	response.render('secret.ejs');
 }
 
+function userBooks(request, response){
+	var userId = request.params.id;
+
+	response.render('userBooks.ejs');
+}
+
 // Saves book info to user 
 function saveBook(request, response, next) {
 	console.log('Save book controller/users.js');
 	var id = request.params.id;
-	dbUser.findById(id)
+	db.User.findById(id)
 	.exec(function(err, foundUser) {
 		console.log(foundUser.books);
-		response.JSON(foundUser.books);
+		// response.JSON(foundUser.books);
 	});
 
 }
@@ -61,12 +69,17 @@ function saveBook(request, response, next) {
 function postsavedBook(request, response, next) {
 	console.log('postsavedBook controller/users.js');
 	var id = request.params.id;
-	dbUser.findById(id)
+	var title = request.params.title;
+		
+
+	db.User.findById(id)
 	.exec(function(err, foundUser){
 		console.log(foundUser);
-		foundUser.books.push({itle: request.body.title,
-			authors: request.body.authors,
-			description: request.body.description});
+		
+		foundUser.books.push({title: request.body.title,
+		authors: request.body.authors,
+		description: request.body.description,
+		smallThumbnail: request.body.smallThumbnail});
 		foundUser.save(function(err){
 			response.json(foundUser);
 		});
@@ -82,5 +95,6 @@ module.exports = {
   getLogout: getLogout,
   secret: secret,
   saveBook: saveBook,
-  postsavedBook: postsavedBook
+  postsavedBook: postsavedBook,
+  userBooks: userBooks
 };

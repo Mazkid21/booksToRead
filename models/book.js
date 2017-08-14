@@ -2,12 +2,13 @@ var mongoose = require('mongoose');
 var Schema   = mongoose.Schema;
 
 var BookSchema = new Schema({
-		volumeInfo: {
-			id: String,
-			title: String,
+		
+			
+			title: [String],
 			authors: [String],
-			description: String
-		}
+			description: [String],
+			smallThumbnail: [String]
+		
 });
 
 var Book = mongoose.model('Book', BookSchema);

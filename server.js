@@ -34,6 +34,7 @@ app.use(function (req, res, next) {
 	next();
 });
 
+
 var routes = require('./config/routes');
 app.use(routes);
 

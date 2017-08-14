@@ -18,16 +18,6 @@ var  bookSearch =  $('#book-name').val();
     }
 
 console.log(bookSearch);
-
-  // SHOULD WORK GETTING + IN BEWTWEEN search string
-  // function addBookSearch() {
-  
-  //   bookSearch.forEach(function(element, index) {
-  //   bookSearch += element;
-  //   if (index < bookSearch.length -1)
-  //       bookSearch += '+';
-  //   });
-  // }
  
 
 
@@ -151,11 +141,13 @@ console.log(bookSearch);
 
           var button2 = document.createElement('button');
           button2.setAttribute('class', 'btn btn-primary add-book');
+          button2.setAttribute('id', 'save2');
           button2.innerText="SAVE";
           $('.book2').append(button2);
 
           var button3 = document.createElement('button');
           button3.setAttribute('class', 'btn btn-primary add-book');
+          button3.setAttribute('id', 'save3');
           button3.innerText="SAVE";
           $('.book3').append(button3);
 
@@ -168,9 +160,82 @@ console.log(bookSearch);
           console.log($('#save1'));
 
         $('#save1').on('click', function(event){
-              console.log("save1 working");
-              var id = $('#userId').text();
-              console.log(id);
+            console.log("save1 working");
+            console.log(bookImage1);
+            var id = $('#userId').text();
+            console.log(id);
+            console.log(bookAuthor1);
+            console.log(bookTitle1);
+            var saveBook = "secret/" + id + "/books";
+
+            $.ajax({
+              method:"post",
+              url: saveBook,
+              data: {authors: bookAuthor1,
+                     title: bookTitle1,
+                     description: bookDescription1,
+                     smallThumbnail: bookImage1
+                      },
+              success: function(){
+                console.log("yay we are addinggg");
+
+                
+              }
+            });
+
+  });
+
+
+        $('#save2').on('click', function(event){
+            console.log("save2 working");
+            
+            var id = $('#userId').text();
+            console.log(id);
+            console.log(bookAuthor2);
+            console.log(bookTitle2);
+            var saveBook = "secret/" + id + "/books";
+
+            $.ajax({
+              method:"post",
+              url: saveBook,
+              data: {authors: bookAuthor2,
+                     title: bookTitle2,
+                     description: bookDescription2,
+                     smallThumbnail: bookImage2
+                      },
+              success: function(){
+                console.log("yay we are addinggg 2");
+
+                
+              }
+            });
+
+  });
+
+        $('#save3').on('click', function(event){
+            console.log("save3 working");
+            
+            var id = $('#userId').text();
+            console.log(id);
+            console.log(bookAuthor3);
+            console.log(bookTitle3);
+            var saveBook = "secret/" + id + "/books";
+
+            $.ajax({
+              method:"post",
+              url: saveBook,
+              data: {authors: bookAuthor3,
+                     title: bookTitle3,
+                     description: bookDescription3,
+                     smallThumbnail: bookImage3
+                      },
+              success: function(){
+                console.log("yay we are addinggg 3");
+
+                
+              }
+            });
+
   });
 
         $('#searchAgain').click(function(event) {

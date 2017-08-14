@@ -34,8 +34,11 @@ router.route("/logout")
  router.route("/secret")
  	.get(authenticatedUser, usersController.secret);
 
+  router.route("/userBooks")
+    .get(authenticatedUser, usersController.userBooks);
+
    router.route("/secret/:id/books")
     .get(usersController.saveBook)
-   .post(usersController.postsavedBook)
+    .post(usersController.postsavedBook);
 
 module.exports = router
