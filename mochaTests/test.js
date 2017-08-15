@@ -1,6 +1,6 @@
 var expect = require('chai').expect;
 var request = require('request');
-var URL = "https://gentle-coast-85328.herokuapp.com";
+var URL = "https://www.googleapis.com/books/v1/volumes?q=holes";
 
 
 
@@ -23,7 +23,7 @@ it("should have a sentance in the body", function(){
 		apiBody = JSON.parse(apiBody);
 		}
 	console.log(apiBody);
-		expect(apiBody.sentence).to.not.be.empty;
+		expect(apiBody).to.not.be.empty;
 	});
 });
 
