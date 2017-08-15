@@ -4,22 +4,151 @@
 
 <h2> My Books to Read!   </h2>
 
-<ul class="user-books">
+
+
+<ul class="user-books1">
+	
+	<% if(currentUser.books.length > 0){ %>
+
 	<%var bookTitle1 =  JSON.parse(currentUser.books[0].title)%>
 	<%var bookAuthor1 =  JSON.parse(currentUser.books[0].authors)%>
 	<%var bookDescription1 =  JSON.stringify(currentUser.books[0].description)%>
+	<% var bookImage1 = currentUser.books[0].smallThumbnail %>
 	
-
+	<img src="<%= bookImage1 %>">
 	<h2> Title  </h2>
 	<li><%= bookTitle1 %></li>
 	<h2> Author </h2>
 	<li><%= bookAuthor1 %> </li>
 	<h2> Description </h2>
 	<li><%= bookDescription1 %> </li>
-	
+  	
+        
+        
+    
 </ul>
 
+<% } else{ %>  
+    <h2 class="no-books">No books added yet!</h2>
+<% } %>
 
+<ul class="user-books2">
+
+	
+	<% if(currentUser.books.length > 1){ %>
+		<hr>
+
+	<%var bookTitle2 =  JSON.parse(currentUser.books[1].title)%>
+	<%var bookAuthor2 =  JSON.parse(currentUser.books[1].authors)%>
+	<%var bookDescription2 =  JSON.stringify(currentUser.books[1].description)%>
+	<% var bookImage2 = currentUser.books[1].smallThumbnail %>
+	
+	<img src="<%= bookImage2 %>">
+	<h2> Title  </h2>
+	<li><%= bookTitle2 %></li>
+	<h2> Author </h2>
+	<li><%= bookAuthor2 %> </li>
+	<h2> Description </h2>
+	<li><%= bookDescription2 %> </li>
+  	
+        
+        
+    
+</ul>
+
+<% } else{ %>  
+    
+<% } %>
+
+
+<ul class="user-books3">
+
+	
+	<% if(currentUser.books.length > 2){ %>
+		<hr>
+
+
+	<%var bookTitle3 =  JSON.parse(currentUser.books[2].title)%>
+	<%var bookAuthor3 =  JSON.parse(currentUser.books[2].authors)%>
+	<%var bookDescription3 =  JSON.stringify(currentUser.books[2].description)%>
+	<% var bookImage3 = currentUser.books[2].smallThumbnail %>
+	
+	<img src="<%= bookImage3 %>">
+	<h2> Title  </h2>
+	<li><%= bookTitle3 %></li>
+	<h2> Author </h2>
+	<li><%= bookAuthor3 %> </li>
+	<h2> Description </h2>
+	<li><%= bookDescription3 %> </li>
+  	
+        
+        
+    
+</ul>
+
+<% } else{ %>  
+    
+<% } %>
+
+<ul class="user-books4">
+
+	
+	<% if(currentUser.books.length > 3){ %>
+		<hr>
+
+
+	<%var bookTitle4 =  JSON.parse(currentUser.books[3].title)%>
+	<%var bookAuthor4 =  JSON.parse(currentUser.books[3].authors)%>
+	<%var bookDescription4 =  JSON.stringify(currentUser.books[3].description)%>
+
+<% var bookImage4 = currentUser.books[3].smallThumbnail %>
+	
+	<img src="<%= bookImage4 %>">
+	<h2> Title  </h2>
+	<li><%= bookTitle4 %></li>
+	<h2> Author </h2>
+	<li><%= bookAuthor4 %> </li>
+	<h2> Description </h2>
+	<li><%= bookDescription4 %> </li>
+  	
+        
+        
+    
+</ul>
+
+<% } else{ %>  
+    
+<% } %>
+
+<ul class="user-books5">
+
+	
+	<% if(currentUser.books.length > 4){ %>
+		<hr>
+
+
+	<%var bookTitle5 =  JSON.parse(currentUser.books[4].title)%>
+	<%var bookAuthor5 =  JSON.parse(currentUser.books[4].authors)%>
+	<%var bookDescription5 =  JSON.stringify(currentUser.books[4].description)%>
+	
+	<% var bookImage5 = currentUser.books[4].smallThumbnail %>
+	
+	<img src="<%= bookImage5 %>">
+	<h2> Title  </h2>
+	<li><%= bookTitle5 %></li>
+	<h2> Author </h2>
+	<li><%= bookAuthor5 %> </li>
+	<h2> Description </h2>
+	<li><%= bookDescription5 %> </li>
+  	
+        
+        
+    
+</ul>
+
+<% } else{ %>  
+    
+<% } %>
 
 
 
