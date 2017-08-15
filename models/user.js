@@ -1,3 +1,5 @@
+// Users data base's model
+
 var mongoose = require('mongoose');
 var bcrypt   = require('bcrypt-nodejs');
 var Book     = require('./book');

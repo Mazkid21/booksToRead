@@ -1,3 +1,4 @@
+/*css file for entire app*/
 body {
 	background-color: #FFEC18; 
 	/*background-image: url("../images/Book3.jpg");*/
@@ -8,15 +9,16 @@ body {
 
 }
 
+/*navebar design*/
 .navbar-default {
 	background-color: #FFEC18;
 	color: #F3EFF5
 }
-
+/*container designs*/
 .container {
 	color: #212221
 }
-
+/*brand text color*/
 #bootstrap-overrides .navbar-brand  {
 	color: white;
 }
@@ -24,7 +26,7 @@ body {
 #bootstrap-overrides a {
 	color: white;
 }
-
+/*button design */
 #bootstrap-overrides .btn {
 	border: 0px;
     padding: 0px;
@@ -33,45 +35,51 @@ body {
 	color: black; 
 
 }
-
+/*design for all labels*/
 label {
 	color: black;
 }
-
+/*desing for all h2s */
 h2{
 	color: black;
 }
+/*design for all p tags */
 
 p{
 	color: black;
 }
 
+/*books1 border design*/
 div.book1 {
     border-bottom: 2px solid black;
     border-top: 2px solid black;
 	padding: 5px;
 	line-height: 20px;
 }
-
+/*books2 border design*/
 div.book2 {
 	border-bottom: 2px solid black;
     border-top: 2px solid black;
 	padding: 5px;
 }
-
+/*books3 border design*/
 div.book3 {
 	border-bottom: 2px solid black;
     border-top: 2px solid black;
 	padding: 5px;
 }
+/*button over design, tweaks buttons when hovered over*/
 #bootstrap-overrides .btn:hover {
 	box-shadow: inset 1px 1px 1px 1px white;
 }
 
+/*desing for when button is clicked*/
 #bootstrap-overrides .btn:active {
 	background-color: white;
    
 }
+
+/*form design*/
 
 .form-control {
 	background-color: #FFEC18;
@@ -80,6 +88,7 @@ div.book3 {
 	
 }
 
+/*centering text on homepage*/
  #homepage  {
 	text-align: center;
 }
@@ -166,29 +175,5 @@ hr:after {
 #bootstrap-overrides#searchAgain.btn {
 	color: #C03221; 
 }
-
-
-/*button.landing {
-	border: 0px;
-    padding: 0px;
-    
-}
-
-
-button.landing:hover {
-    background-color: white;
-    color: black;
-}
-
-
-button.landing:active {
-	background-color: black;
-    box-shadow: 0 5px black;
-    color: white;
-	transform: translateY(2px);
-
-}
-
-*/
 
 

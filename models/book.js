@@ -1,3 +1,5 @@
+// database model for all of the users saved books 
+
 var mongoose = require('mongoose');
 var Schema   = mongoose.Schema;
 

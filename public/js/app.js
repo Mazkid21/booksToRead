@@ -1,17 +1,19 @@
-
-
+// Front end javascript file
+// Loads all function when page is loaded 
 $('document').ready(function(){
   execute();
 });
 // var bookSearch;
 
-
+// fuinction that is called on ready
 function execute() {
-
+// Search book button function
 $("body").append("<div id='bookContainer'><div id='books-list'></div></div");
 $("#searchBook").click(function(event) {
   event.preventDefault();
 var  bookSearch =  $('#book-name').val();
+    // runs through the string that user enetes ans addeds + between spaces so it can be 
+    // used with API request 
     for(var i=0; i < bookSearch.length; i++) {
       bookSearch = bookSearch.replace(" ", "+");
       this.setAttribute("disabled", "disabled");
@@ -23,7 +25,7 @@ console.log(bookSearch);
 
   console.log(bookSearch);
   var userId = $('#userId').text();
-
+// Ajax request to get all the data that user searched for and append to page for user to see 
   var searchUrl = 'https://www.googleapis.com/books/v1/volumes?q=' + bookSearch;
   console.log(searchUrl);
   $.ajax({
@@ -124,15 +126,8 @@ console.log(bookSearch);
 
         $('#books-list').append(bookData);
 
-          // for(i=0; i < data.dataset_data.column_names.length; i++){
-          //   var bookInfo = 
-          //     "<ul class = 'list-group'>" +
-          //       "<li class='list-group-item'>" +
-          //         "<h4 class='bookAttribute'>" + data.dataset_data.column_names[i] + "</h4>" +
-          //           "</li>" + "</ul>";
-
-          //   $("#books-list").append(bookInfo);
-          // }
+  
+          // adds save buttons to each search result
           var button1 = document.createElement('button');
           button1.setAttribute('class', 'btn btn-primary add-book');
           button1.setAttribute('id', 'save1');
@@ -158,7 +153,7 @@ console.log(bookSearch);
           $('.reSearch').append(reSearch);
 
           console.log($('#save1'));
-
+          // sends the data to back end for save button that is clicked
         $('#save1').on('click', function(event){
             console.log("save1 working");
             console.log(bookImage1);
@@ -186,7 +181,7 @@ console.log(bookSearch);
 
   });
 
-
+        // sends the data to back end for save button that is clicked
         $('#save2').on('click', function(event){
             console.log("save2 working");
             
@@ -212,7 +207,7 @@ console.log(bookSearch);
             });
 
   });
-
+        // sends the data to back end for save button that is clicked
         $('#save3').on('click', function(event){
             console.log("save3 working");
             
@@ -238,7 +233,7 @@ console.log(bookSearch);
             });
 
   });
-
+        // Search again button so user can use the same form to search for more books! 
         $('#searchAgain').click(function(event) {
           console.log("#books-list");
           $('#books-list').remove("#books-list");

@@ -1,11 +1,11 @@
 <% include ./partials/header.ejs %>
-
+<!-- current user Id that is then used with jquery -->
 <p id="userId"><%=currentUser._id%></p>
 
 <h2> My Books to Read!   </h2>
 
 
-
+<!-- first book saved to the db. Addind to page if it is there, if not it will show h2 with no books added yet -->
 <ul class="user-books1">
 	
 	<% if(currentUser.books.length > 0){ %>
@@ -31,7 +31,7 @@
 <% } else{ %>  
     <h2 class="no-books">No books added yet!</h2>
 <% } %>
-
+<!-- keeps adding books if they are saved to db -->
 <ul class="user-books2">
 
 	
@@ -60,7 +60,7 @@
     
 <% } %>
 
-
+<!-- keeps adding books if they are saved to db -->
 <ul class="user-books3">
 
 	
