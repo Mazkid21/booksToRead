@@ -41,4 +41,7 @@ router.route("/logout")
     .get(usersController.saveBook)
     .post(usersController.postsavedBook);
 
+    // router.route("/userBooks")
+    //   .delete(authenticatedUser, usersController.deleteBook);
+
 module.exports = router
