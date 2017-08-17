@@ -87,21 +87,23 @@ function postsavedBook(request, response, next) {
 	});
 }
 
-// function deleteBook(request, response, next){
-// 	console.log("deleteBook is working?");
-// 	var id = request.params.id;
-// 	var book = request.params.book;
-// 		console.log(book);
-// 	db.User.findOne(currentUser.id)
-// 		.exc(function(err,foundUser){
-// 			for(i=0; i < foundUser.books.length; i++){
-// 				foundUser.books.splice(i,1);
-// 				foundUser.save();
-// 				response.JSON(foundUser.books);
-// 			}
-// 		});
+function deleteBook(request, response, next){
+	console.log("deleteBook is working?");
+	var id = request.params.id;
+	var title = request.params.title;
+		
 
-// }
+	db.User.findById(id)
+	.exec(function(err, foundUser){
+		console.log(foundUser);
+			for(i=0; i < foundUser.books.length; i++){
+				foundUser.books.splice(i,1);
+				foundUser.save();
+				
+			}
+		});
+
+}
 
 module.exports = {
   getLogin: getLogin,
@@ -112,6 +114,7 @@ module.exports = {
   secret: secret,
   saveBook: saveBook,
   postsavedBook: postsavedBook,
-  userBooks: userBooks
+  userBooks: userBooks,
+  deleteBook: deleteBook
   
 };

@@ -35,13 +35,16 @@ router.route("/logout")
  	.get(authenticatedUser, usersController.secret);
 
   router.route("/userBooks")
-    .get(authenticatedUser, usersController.userBooks);
+    .get(authenticatedUser, usersController.userBooks)
+    
 
    router.route("/secret/:id/books")
     .get(usersController.saveBook)
     .post(usersController.postsavedBook);
+ 
+ router.route("/userBooks/:id/books")
+ .delete(authenticatedUser, usersController.deleteBook);
 
-    // router.route("/userBooks")
-    //   .delete(authenticatedUser, usersController.deleteBook);
+   
 
 module.exports = router
