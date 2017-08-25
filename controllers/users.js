@@ -90,17 +90,23 @@ function postsavedBook(request, response, next) {
 function deleteBook(request, response, next){
 	console.log("deleteBook is working?");
 	var id = request.params.id;
-	var title = request.params.title;
+	console.log(id);
+	var book = request.query.book;
+	console.log(book);
 		
 
 	db.User.findById(id)
 	.exec(function(err, foundUser){
-		console.log(foundUser);
+		console.log(foundUser.books +  book + "foundUser.books line 100");
+
+		
 			for(i=0; i < foundUser.books.length; i++){
-				foundUser.books.splice(i,1);
-				foundUser.save();
-				
-			}
+				if(book == foundUser.books[i].name){
+					console.log("if statmetn working");
+					foundUser.books.splice(book);
+					foundUser.save();
+				}
+		 }
 		});
 
 }

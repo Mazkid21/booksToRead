@@ -14,20 +14,24 @@
 	<%var bookAuthor1 =  JSON.parse(currentUser.books[0].authors)%>
 	<%var bookDescription1 =  JSON.stringify(currentUser.books[0].description)%>
 	<% var bookImage1 = currentUser.books[0].smallThumbnail %>
+	<% var bookId = currentUser.books[0].id %>
 	
 	<img src="<%= bookImage1 %>">
+	<p id="bookId1"> <%= bookId %> </p>
 	<h2> Title  </h2>
 	<li><%= bookTitle1 %></li>
 	<h2> Author </h2>
 	<li><%= bookAuthor1 %> </li>
 	<h2> Description </h2>
 	<li><%= bookDescription1 %> </li>
-	<button class="btn btn-info active" id="delete1">DELETE</button
+	
   	
         
         
     
 </ul>
+
+<button class="btn btn-info active" id="delete1">DELETE ALL BOOKS</button>
 
 <% } else{ %>  
     <h2 class="no-books">No books added yet!</h2>
@@ -51,7 +55,7 @@
 	<li><%= bookAuthor2 %> </li>
 	<h2> Description </h2>
 	<li><%= bookDescription2 %> </li>
-	<button class="btn btn-info active" id="delete2">DELETE</button
+	
   	
         
         
@@ -82,8 +86,9 @@
 	<li><%= bookAuthor3 %> </li>
 	<h2> Description </h2>
 	<li><%= bookDescription3 %> </li>
-	<button class="btn btn-info active" id="delete3" >DELETE</button
-  	
+	
+	
+  
         
         
     
@@ -113,7 +118,7 @@
 	<li><%= bookAuthor4 %> </li>
 	<h2> Description </h2>
 	<li><%= bookDescription4 %> </li>
-	<button class="btn btn-info active" id="delete4">DELETE</button
+	
   	
         
         
@@ -144,11 +149,12 @@
 	<li><%= bookAuthor5 %> </li>
 	<h2> Description </h2>
 	<li><%= bookDescription5 %> </li>
-  	<button class="btn btn-info active" id="delete5">DELETE</button
+  	
         
         
     
 </ul>
+
 
 <% } else{ %>  
     

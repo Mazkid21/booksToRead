@@ -172,8 +172,11 @@ hr:after {
 	display: none;
 }
 
+#bookId1{
+	display: none;
+}
+
 #bootstrap-overrides#searchAgain.btn {
 	color: #C03221; 
 }
-
 
